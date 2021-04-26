@@ -21,6 +21,7 @@ class DriverResource extends JsonResource
             'birth_day'                => $this->birth_day,
             'driver_license_id_number' => $this->driver_license_id_number,
             'validity_driver_license'  => $this->validity_driver_license,
+            'cars'                     => CarResource::collection($this->cars),
         ];
     }
 }

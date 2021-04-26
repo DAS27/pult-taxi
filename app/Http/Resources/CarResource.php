@@ -20,6 +20,7 @@ class CarResource extends JsonResource
             'license_plate' => $this->license_plate,
             'color'         => $this->color,
             'model_year'    => $this->model_year,
+            'tariffs'       => TariffResource::collection($this->tariffs),
         ];
     }
 }
