@@ -62,7 +62,10 @@ class DriverController extends Controller
      * @param  int                       $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Driver $driver)
     {
+        $driver->delete();
+
+        return response(null, 204);
     }
 }
